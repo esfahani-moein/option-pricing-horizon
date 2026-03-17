@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "option_pricing_horizon"
+version = "0.1.0"
+description = "Comprehensive option pricing library: European (Black-Scholes) and Asian (geometric closed-form + arithmetic Monte Carlo)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["option_pricing_horizon*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
